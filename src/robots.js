@@ -41,4 +41,22 @@ export const robots = [
     username: 'koka',
     email: 'koka@bob.com'
   },
+  {
+    id: 8,
+    name: 'Tony',
+    username: 'Toooony',
+    email: 'tony@bob.com'
+  },
+  {
+    id: 9,
+    name: 'Stev',
+    username: 'Stevou',
+    email: 'stev@bob.com'
+  },
+  {
+    id: 10,
+    name: 'Nono',
+    username: 'Nono',
+    email: 'nono@bob.com'
+  },
 ]
