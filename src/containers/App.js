@@ -19,6 +19,7 @@ function App() {
   // using hooks
   const [robots, setRobots] = useState([])
   const [searchfield, setSearchfield] = useState('')
+  const [count, setCount] = useState(0)
 
   // componentDidMount() {
   //   fetch('https://jsonplaceholder.typicode.com/users')
@@ -31,7 +32,8 @@ function App() {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response =>  response.json())
     .then(users => {setRobots(users)});
-  },[])
+    console.log(count);
+  },[count]) // only run if count changes
 
 
   const onSearchChange = (event) => {
@@ -47,6 +49,7 @@ function App() {
     (
       <div className='tc'>
         <h1 className='f1'>Guilhem's Robofriends</h1>
+        <button onClick={() => setCount(count+1)} className='f6 link dim ph3 pv2 mb2 dib white bg-light-purple'>Click Me</button>
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           <ErrorBoundry>
